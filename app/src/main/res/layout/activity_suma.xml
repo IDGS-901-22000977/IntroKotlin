@@ -7,4 +7,87 @@
     android:layout_height="match_parent"
     tools:context=".ejemplo1.SumaActivity">
 
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="Número 1"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="Número 2"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et1"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupOperaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et2">
+
+        <RadioButton
+            android:id="@+id/radioSuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checked="true"
+            android:text="+"/>
+
+        <RadioButton
+            android:id="@+id/radioResta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="-"/>
+
+        <RadioButton
+            android:id="@+id/radioMultiplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="×"/>
+
+        <RadioButton
+            android:id="@+id/radioDivision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="÷"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:onClick="calcular"
+        android:text="Calcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupOperaciones"/>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="281dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="24dp"
+        android:text="Resultado: 0.0"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
