@@ -9,6 +9,7 @@
 
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtName"
         android:layout_width="335dp"
         android:layout_height="66dp"
         android:layout_marginBottom="32dp"

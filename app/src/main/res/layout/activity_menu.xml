@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
 
 
+    android:orientation="horizontal"
     tools:context=".MenuActivity">
 
     <Button
@@ -14,6 +15,6 @@
         android:layout_width="365dp"
         android:layout_height="wrap_content"
         android:text="Ejemplo1"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </LinearLayout>
